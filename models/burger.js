@@ -9,7 +9,7 @@ var Burger = {
     },
     // The variables cols and vals are arrays.
     insertOne: function (cols, vals, cb) {
-        orm.insertOne("Burgers", cols, vals, function (res) {
+        orm.insertOne("burgers", cols, vals, function (res) {
             cb(res);
         });
     },
@@ -20,5 +20,5 @@ var Burger = {
     }
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller (burger_controller.js).
 module.exports = Burger;
