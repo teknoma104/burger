@@ -15,17 +15,37 @@
 	<body>
 		<div class="container">
 			<div class="jumbotron text-center">
-				<h1>Bob's Burgers!</h1>
+				<img src="/assets/img/logo.png" class="rounded mx-auto d-block" width="900px">
 				<h3>The greatest burger joint on the East Coast!</h3>
 				<hr>
 			</div>
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-lg-8">
 					{{{ body }}}
 				</div>
-				<div class="col-lg-6">
-					<img src="" class= "rounded mx-auto d-block" height="500px" id="Bob">
+				<div class="col-lg-4">
+					<img src="" class="rounded mx-auto d-block" height="500px" id="Bob">
 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Add a new Burger</h2>
+					<form class="create-form">
+
+						<div class="form-group">
+							<label for="burgerName">Burger Name:</label>
+							<input type="text" id="burgerName" name="name">
+						</div>
+
+						<div class="form-group">
+							<label for="devoured">Devoured?</label><br>
+							<input type="radio" name="devoured" value="1" checked> Devoured!<br>
+							<input type="radio" name="devoured" value="0"> Not Devoured!
+						</div>
+
+						<button type="submit">Add Burger</button>
+					</form>
 				</div>
 			</div>
 		</div>

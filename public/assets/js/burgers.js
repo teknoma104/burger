@@ -8,6 +8,15 @@ $(function () {
             devoured: newDevoured
         };
 
+        console.log("devoured = " + newDevoured);
+
+        if (newDevoured === true)
+        {
+            $("#Bob").prop("src","/assets/img/bob-serve.jpg");
+        } else {
+            $("#Bob").prop("src","/assets/img/bob-angry.jpg");
+        }
+
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
