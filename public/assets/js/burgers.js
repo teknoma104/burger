@@ -49,7 +49,7 @@ $(function () {
             return isValid;
         }
 
-        if (validateForm) {
+        if (validateForm()) {
 
             var newBurger = {
                 burger_name: $("#burgerName").val().trim(),
@@ -68,6 +68,8 @@ $(function () {
                 }
             );
 
+        } else {
+            alert("Please fill out all fields before submitting!");
         }
 
     });
